@@ -1,6 +1,7 @@
 const express = require('express');
 const hbs = require('hbs');
 const app = express();
+const PORT = process.env.PORT || 3000;
 
 //handlebars configurations
 hbs.registerPartials(__dirname + '/views/partials');
@@ -35,6 +36,6 @@ app.get('/bad', (req, res)=>{
 	});
 });
 
-app.listen(3000, ()=>{
+app.listen(PORT, ()=>{
 	console.log('Server is up and running on port 3000');
 });
