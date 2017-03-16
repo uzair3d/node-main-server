@@ -12,6 +12,7 @@ app.set('view engine', 'hbs');
 
 app.use((req, res, next)=>{
 	res.send('<h1>We are under maintenance!</h1><br><h3>We will be back soon!</h3>');
+	next();
 });
 
 // Express middleware
