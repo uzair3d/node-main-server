@@ -10,6 +10,10 @@ hbs.registerPartials(__dirname + '/views/partials');
 //setting the view engine for express
 app.set('view engine', 'hbs');
 
+app.use((req, res, next)=>{
+	res.send('<h1>We are under maintenance!</h1><br><h3>We will be back soon!</h3>');
+});
+
 // Express middleware
 app.use(express.static(__dirname+'/public'));
 
