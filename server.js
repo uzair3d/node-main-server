@@ -24,7 +24,7 @@ app.get('/', (req, res)=>{
 	res.render('home.hbs', {
 		pageTitle: 'Welcome to Boiling Shelf',
 		pageMainHeader: 'Home Page',
-		copyrightYear: new Date().getFullYear
+		copyrightYear: new Date().getFullYear()
 	})
 });
 
