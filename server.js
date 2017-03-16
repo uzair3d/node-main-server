@@ -15,17 +15,23 @@ app.use(express.static(__dirname+'/public'));
 
 app.get('/', (req, res)=>{
 	// res.send('<h1>Hello Express</h1>');
-	res.send({
-		address: 'Lahore',
-		tip: 'Sure',
-		weather: 'Cool',
-		hello: [{partial: 'derivative', value: '90'}, {partial: 'derivative', value: '100'}]
+	// res.send({
+	// 	address: 'Lahore',
+	// 	tip: 'Sure',
+	// 	weather: 'Cool',
+	// 	hello: [{partial: 'derivative', value: '90'}, {partial: 'derivative', value: '100'}]
+	// })
+	res.render('home.hbs', {
+		pageTitle: 'Welcome to Boiling Shelf',
+		pageMainHeader: 'Home Page',
+		copyrightYear: new Date().getFullYear
 	})
 });
 
 app.get('/about', (req, res)=>{
 	res.render('about.hbs', {
 		pageTitle: 'About | What we are',
+		pageMainHeader: 'About Page',
 		copyrightYear: new Date().getFullYear()
 	});
 });
